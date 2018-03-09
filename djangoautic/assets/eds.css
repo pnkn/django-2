@@ -1,0 +1,389 @@
+/* placing background image */
+html {
+	background: url(img/backg2.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+
+/* mobile first grid layout */
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100% 100% 100% 100%% 100% 100% 100% 100% 100%;
+	grid-template-areas:
+	"logo logo"
+	"bar bar"
+	"art art"
+	"sum sum"
+	"rev rev"
+	"bio bio"
+	"slide slide"
+	"sidebar sidebar"
+	"footer footer";
+	grid-gap: 5px;
+
+}
+
+
+/* Styling specific grid cells and their nested contents*/
+
+/* Grid cell for Logo */
+.logo {
+	grid-area: logo;
+	justify-self: center;
+	border: 2px solid black;
+	border-bottom: 3px solid black;
+	border-radius: 20px;
+	height: 260px;
+}
+
+.art {
+	grid-area: art;
+	justify-self: center;
+	border: 2px solid black;
+}
+
+/* Border around Logo image */
+.logo img {
+	border-radius: 20px;
+}
+
+/* Shrinking the Logo cell and image for mobile */
+.logo, .logo img {
+	width: 320px;
+}
+
+/* Grid cell for Navigation bar */
+.bar {
+	grid-area: bar;
+	align-self: center;
+	justify-self: right;
+	font-size: 18px;
+}
+
+/* Grid cell for Sidebar */
+.sidebar {
+	grid-area: sidebar;
+	width: 275px;
+	justify-self: center;
+	font-size: 15px;
+}
+
+/* Styling the list for Sidebar timeline */
+.sidebar li {
+	list-style-type: none;
+	text-align: left;
+	margin-right: 15px;
+}
+
+.year {
+	text-decoration: underline;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-right: 20px;
+	font-size: 19px;
+}
+
+/* Horizonal Rules for Sidebar timeline */
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	margin-top: 15px;
+	margin-right: 25px;
+	background-color: #EF3340;
+}
+
+.art{
+	grid-area: art;
+	justify-self: center;
+	border: 2px solid black;
+}
+
+.art p {
+	border 1px solid black;
+	padding; 1px;
+}
+
+/* Grid cell for Slideshow */
+.slide {
+	grid-area: slide;
+	text-align: center;
+	margin-top: 5%;
+}
+
+/* Previous and Next buttons */
+.prev, .next {
+	cursor: pointer;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	background-color: black;
+	position: absolute;
+	margin-top: 220px;
+	margin-left: -30px;
+	opacity: 0.7;
+}
+
+/* Placing 'next' button above 'previous' button */
+.next {
+	margin-top: 177px;
+}
+
+/* Sizing and borders of Slideshow images */
+.slide img {
+	width: 317px;
+	height: 265px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+/* Grid cell for website Summary */
+.sum {
+	grid-area: sum;
+	align-self: center;
+	text-align: center;
+	display: grid;
+}
+
+/* Grid cell for Episode Reviews */
+.rev {
+	grid-area: rev;
+	align-self: center;
+	text-align: center;
+	background-image: url("img/blue_blank.jpg");
+	margin-right: 20px;
+	border-radius: 5px;
+	border:2px solid black;
+	margin-top: 5%;
+}
+
+/* Placing, border and size for Episode Reviews image */
+.review_img {
+	float: left;
+	width: 95px;
+	height: 95px;
+	border-radius: 5px;
+	border-right: 2px solid black;
+}
+
+
+/* Grid cell for Character Bios */
+.bio {
+	grid-area: bio;
+	align-self: center;
+	text-align: center;
+	background-image: url("img/reverse_blue_blank.jpg");
+	margin-left: 20px;
+	border-radius: 5px;
+	border:2px solid black;
+	margin-top: 5%;
+}
+
+/* Placing, border and size for Bios image */
+.bio_img {
+	float: right;
+	width: 95px;
+	height: 95px;
+	border-radius: 5px;
+	border-left: 2px solid black;
+}
+
+/* Oval borders around Review and Bio link text */
+.rev span, .bio span {
+	margin-top:25px;
+	font-size: 20px;
+	border: 1px solid black;
+	border-radius: 50%;
+	display: inline-block;
+	background-color: #FF8200;
+	color: black;
+	padding: 7px;
+
+}
+
+/* Changing how the link text looks */
+.rev a, .bio a {
+	text-decoration: none;
+	color: black;
+
+}
+
+
+/* Footer grid cell */
+.footer {
+	grid-area: footer;
+	align-self: center;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+/* Text inside footer */
+.footer span {
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 5px;
+	display: inline-block;
+	background-color: #FFD100;
+	color: black;
+	opacity: 0.9;
+	padding: 3px 8px 3px 8px;
+}
+/* End grid cell styling */
+
+
+
+/* Making the Navigation bar, there's a better way probably */
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #949300;
+
+}
+
+.navbar a:link, a:visited {
+	display: block;
+	font-weight: bold;
+	color: #ffffff;
+	width: 150px;
+	text-align: center;
+	padding: 4px;
+	background-color: #949300;
+	text-decoration: none;
+}
+
+.navbar a:hover, a:active {
+	color: #CB333B;
+	background-color: #FBDB65;
+}
+
+.navbar li {
+	display: inline-block;
+}
+/* End of Navigation bar */
+
+
+
+/* Give Sidebar and Summary cells color, round borders, slightly transparent */
+.sidebar, .sum {
+	background-color: #FFD100;
+	opacity: 0.9;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+
+/* Changing font for Navigation, Sidebar, Summary, Reviews and Bios */
+.bar, .sidebar, .sum, .rev, .bio {
+	font-family: 'Kalam', cursive;
+}
+
+
+/* desktop grid layout */
+@media screen and (min-width: 736px) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 380px 330px 330px 1fr;
+		grid-template-rows: 100% 40px 150px 160px 100% 400px 50px;
+		grid-template-areas:
+		". logo bar bar ."
+		". sidebar . . ."
+		". sidebar sum sum ."
+		". sidebar rev bio ."
+		". sidebar slide slide ."
+		". . art art ."
+		". footer footer footer .";
+	}
+
+	/* Grid cell for logo */
+	.logo {
+	grid-area: logo;
+	justify-self: center;
+	border: 2px solid black;
+	border-bottom: 3px solid black;
+	border-radius: 20px;
+	height: 260px;
+	}
+
+	.art{
+		grid-area: art;
+		justify-self: center;
+		border: 2px solid black;
+	}
+
+	.art p {
+		border 1px solid black;
+		padding; 1px;
+	}
+
+	/* Rounding the image inside of the Logo cell */
+	.logo img {
+	border-radius: 20px;
+	}
+
+	/* Grid cell for Slideshow */
+	.slide {
+		margin-top: 5px;
+	}
+
+	/* Previous and Next buttons */
+	.prev, .next {
+	cursor: pointer;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	background-color: black;
+	position: absolute;
+	margin-top: 405px;
+	margin-left: -30px;
+	}
+
+	/* Placing the 'next' button on top of the 'previous' button */
+	.next {
+	margin-top: 360px;
+	}
+
+	/* Resizing the images inside of Slideshow cell */
+	.slide img {
+		width: 650px;
+		height: 450px;
+	}
+
+	/* Text inside of Reviews and Bios links */
+	.rev span, .bio span {
+		margin: 23px;
+	}
+
+	/* Grid cell for Footer */
+	.footer {
+	grid-area: footer;
+	align-self: center;
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 50px;
+	}
+
+	/* Text inside Footer cell */
+	.footer span {
+	font-size: 14px;
+	border: 1px solid black;
+	border-radius: 5px;
+	display: inline-block;
+	color: black;
+	opacity: 0.9;
+	padding: 3px 8px 3px 8px;
+	}
+
+}
